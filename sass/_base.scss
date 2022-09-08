@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap');
+
+/* Basic css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+textarea,
+select,
+input,
+label,
+button {
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  @include mdscreens {
+    font-size: 50%;
+  }
+
+  @include lgscreens {
+    max-width: 140rem;
+    margin: 0 auto;
+    background-color: var(--overall-color);
+  }
+}
+
+body {
+  background-color: var(--overall-color);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 1.7rem;
+  text-rendering: optimizeSpeed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.1ms !important;
+    animation-iteration-count: 0.1ms !important;
+    transition-duration: 0.1ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
+}

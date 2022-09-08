@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script defer src="script.js"></script>
+    <title>GEOSKY | fast weather updates | accurate mapping|</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <div class="header__logo">
+          <h1 class="header__heading">geosky</h1>
+        </div>
+      </a>
+
+      <form action="search" class="form">
+        <input
+          id="search"
+          type="search"
+          class="form__input"
+          placeholder="Search country/city/town for weather..."
+          autocomplete="off"
+        />
+        <button class="form__btn">
+          <svg class="search__icon">
+            <use xlink:href="assets/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+
+      <div class="header__btn">
+        <button class="header__btn--recent">Search History</button>
+        <svg class="recent__icon">
+          <use xlink:href="assets/sprite.svg#icon-back-in-time"></use>
+        </svg>
+        <ul class="recent--list">
+          <!-- <li class="recent--item">No search history</li> -->
+          <!-- <li class="recent--item">recent--item 2</li>
+          <li class="recent--item">recent--item 3</li>
+          <li class="recent--item">recent--item 4</li>
+          <li class="recent--item">recent--item 5</li>
+          <li class="recent--item">recent--item 6</li> -->
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="weather" id="weather-view-details">
+        <div class="weather__wrapper">
+          <div class="weather__info--start">
+            <p>
+              Your search results will appear here <br />
+              <div class="sm-screen-instruction">Click on your search results to display a map of the location</div><br/>
+              <!-- <svg class="info__icon">
+                <use xlink:href="assets/sprite.svg#icon-smile"></use>
+              </svg> -->
+            </p>
+          </div>
+          <!-- <div class="weather__container" data-unique="${info.uniqueID}">
+            <h2 class="weather__heading">Region:</h2>
+            <p class="weather__text">${info.region}, ${info.country}</p>
+            <img src="${info.icon}" alt="weather-icon" class="weather__img" />
+            <p class="weather__text">${info.currentCondition}</p>
+            <div class="weather__info--more">
+              <h2 class="weather__heading">Updated at:</h2>
+              <p class="weather__text">${info.lastUpdate}</p>
+              <h2 class="weather__heading">Local Time:</h2>
+              <p class="weather__text">${info.localTime}</p>
+              <h2 class="weather__heading">Temp(℃):</h2>
+              <p class="weather__text">${info.currentTemp_Deg} ℃</p>
+              <h2 class="weather__heading">Temp(℉):</h2>
+              <p class="weather__text">${info.currentTemp_Fh} ℉</p>
+            </div>
+          </div> -->
+        </div>
+
+        <p class="copyright">Copyright | &copy; 2022 | Francis Bittok</p>
+        <!-- <div class="error">
+           <svg class="load__icon">
+          <use xlink:href="assets/sprite.svg#icon-loader"></use>
+        </svg>
+          <p class="error_message"></p>
+        </div> -->
+      </div>
+      <div id="map"></div>
+    </div>
+    <!-- <div class="load">
+        <svg class="load__icon">
+          <use xlink:href="assets/sprite.svg#icon-loader"></use>
+        </svg>
+      </div> -->
+  </body>
+</html>

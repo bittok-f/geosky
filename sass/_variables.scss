@@ -1,0 +1,25 @@
+:root {
+  --overall-color: #e9ecef;
+  --overall-dark: #d3d5d7;
+
+  --primary-color: #004b0d;
+  --primary-light: #195d25;
+  --primary-dark: #00430b;
+  --primary-color-opacity: rgba(0, 75, 13, 0.6);
+
+  --secondary-color: #7584ad;
+  --secondary-dark: #69769b;
+  --secondary-light: #8290b5;
+  --secondary-color-opacity: rgba(117, 132, 173, 0.6);
+
+  --accent-color: #620700;
+  --accent-light: #711f19;
+  --accent-dark: #580600;
+  --accent-color-opacity: rgba(98, 7, 0, 0.8);
+
+  --primary-font: #efefef;
+  --primary-font-dark-bg: #efefef;
+
+  --box-shadow-dark: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  --box-shadow-light: 0 1rem 2rem rgba(255, 255, 255, 0.2);
+}

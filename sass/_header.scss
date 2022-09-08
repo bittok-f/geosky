@@ -1,0 +1,245 @@
+.header {
+  height: 7rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--accent-color);
+  @include lgscreens {
+    border-left: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+  }
+
+  @include smscreens {
+    position: sticky;
+    top: 0;
+    z-index: 1000000;
+    background-color: var(--overall-color);
+    width: 100%;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+  }
+}
+
+.load {
+  text-align: center;
+}
+
+.load__icon {
+  height: 5rem;
+  width: 5rem;
+  fill: var(--accent-color);
+
+  animation: loader infinite 2s linear;
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav {
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--overall-color);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+
+  &__btn {
+    margin-left: -5rem;
+    cursor: pointer;
+    border-radius: 10rem;
+    height: 4rem;
+    width: 4rem;
+    outline: none;
+    background-color: var(--overall-color);
+    color: var(--overall-color);
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: none;
+    padding: 1rem 0;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--overall-dark);
+    }
+  }
+}
+
+.form input {
+  display: flex;
+  align-items: center;
+  background-color: var(--overall-color);
+  border-radius: 10rem;
+  height: 5rem;
+  padding: 0 2rem;
+  width: 40rem;
+  border: 1px solid var(--overall-color);
+  box-shadow: var(--box-shadow-dark);
+  transition: all 0.3s ease-in-out;
+
+  @include xsmscreens {
+    width: 25rem;
+  }
+}
+
+.form__input::placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.form__input::-webkit-placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.form input:focus {
+  outline: none;
+  width: 45rem;
+
+  @include xsmscreens {
+    width: 30rem;
+  }
+}
+
+.search__icon {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  fill: var(--accent-color);
+}
+
+.header__btn {
+  align-self: stretch;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header__btn--recent {
+  cursor: pointer;
+  color: var(--accent-color);
+  background-color: var(--overall-color);
+  padding: 0 1rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  font-size: 1.8rem;
+  width: 20rem;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+
+  @include mdscreens {
+    display: none;
+  }
+}
+
+.header__btn--recent:hover {
+  background-color: var(--overall-dark);
+}
+
+.header__btn--recent:hover > .recent__icon {
+  transform: rotate(360deg);
+}
+
+.recent__icon {
+  display: none;
+  height: 3rem;
+  width: 3rem;
+  fill: var(--accent-color);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+
+  &:hover + .recent--list {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include mdscreens {
+    display: block;
+  }
+}
+
+.recent--list:hover,
+.header__btn--recent:hover ~ .recent--list {
+  visibility: visible;
+  opacity: 1;
+}
+
+.recent--list {
+  list-style: none;
+
+  background-color: var(--overall-dark);
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+  position: absolute;
+  top: 105%;
+  right: 0;
+  min-width: 20rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 10000;
+}
+
+.recent--item {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.recent--item:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+.nav-weather {
+  flex: 1;
+  padding: 1rem;
+  color: #fff;
+}
+
+.nav-weather {
+  margin-top: 2rem;
+}
+
+.nav__hide {
+  transform: translateX(-98%);
+}
+
+.hideRecent {
+  visibility: hidden;
+  opacity: 0;
+}

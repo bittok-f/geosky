@@ -1,0 +1,23 @@
+@mixin lgscreens {
+  @media (min-width: 87.5em) {
+    @content;
+  }
+}
+
+@mixin mdscreens {
+  @media (max-width: 50em) {
+    @content;
+  }
+}
+
+@mixin smscreens {
+  @media (max-width: 43.75em) {
+    @content;
+  }
+}
+
+@mixin xsmscreens {
+  @media (max-width: 33.125em) {
+    @content;
+  }
+}

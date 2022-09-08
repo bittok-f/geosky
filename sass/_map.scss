@@ -1,0 +1,17 @@
+#map {
+  height: calc(100vh - 7rem);
+  flex: 1;
+
+  @include smscreens {
+    height: 100vh;
+    flex-basis: 100vw;
+  }
+}
+
+.container {
+  display: flex;
+
+  @include smscreens {
+    flex-direction: column;
+  }
+}

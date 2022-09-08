@@ -1,0 +1,14 @@
+{
+  "name": "geosky",
+  "version": "1.0.0",
+  "description": "A web application to track your workouts and weather and tarck the workouts",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "author": "F. Bittok",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
