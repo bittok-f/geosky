@@ -38,7 +38,7 @@ class App {
   #renderedWeatherData = [];
   #mapZoomLevel = 12;
   #DATA_PER_PAGE = 4;
-  #weatherAPI_URL = `http://api.weatherapi.com/v1/current.json?key=c1fefd6a691d48a7bf0171403221707&q=`;
+  #weatherAPI_URL = `https://api.weatherapi.com/v1/current.json?key=c1fefd6a691d48a7bf0171403221707&q=`;
   #errorMessage = `Location not found. Try another country/city/town`;
   #navUpdatesContainer = document.querySelector('.nav-weather');
   #weatherContainer = document.querySelector('.weather__wrapper');
